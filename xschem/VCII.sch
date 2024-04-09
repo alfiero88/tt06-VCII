@@ -14,7 +14,7 @@ lab=vdd}
 N 450 -80 450 60 {
 lab=G1}
 N 660 -80 660 60 {
-lab=#net1}
+lab=D1}
 N 450 120 450 180 {
 lab=B1}
 N 450 180 660 180 {
@@ -110,17 +110,17 @@ lab=vdd}
 N 730 -200 820 -200 {
 lab=vdd}
 N 860 -110 980 -110 {
-lab=#net2}
+lab=#net1}
 N 820 60 820 140 {
 lab=y}
 N 820 140 820 270 {
 lab=y}
 N 820 -80 820 0 {
-lab=#net2}
+lab=#net1}
 N 910 -110 910 -50 {
-lab=#net2}
+lab=#net1}
 N 820 -50 910 -50 {
-lab=#net2}
+lab=#net1}
 N 1020 -200 1020 -140 {
 lab=vdd}
 N 820 -200 1020 -200 {
@@ -136,7 +136,7 @@ lab=vdd}
 N 1020 -200 1090 -200 {
 lab=vdd}
 N 1020 -80 1020 0 {
-lab=#net3}
+lab=#net2}
 N 1020 60 1020 270 {
 lab=x}
 N 1020 330 1020 380 {
@@ -156,11 +156,11 @@ lab=vss}
 N 1020 380 1100 380 {
 lab=vss}
 N 1060 30 1100 30 {
-lab=#net3}
+lab=#net2}
 N 1100 -40 1100 30 {
-lab=#net3}
+lab=#net2}
 N 1020 -40 1100 -40 {
-lab=#net3}
+lab=#net2}
 N 820 30 1020 30 {
 lab=GND}
 N 820 90 870 90 {
@@ -168,11 +168,11 @@ lab=y}
 N 1020 90 1090 90 {
 lab=x}
 N 750 30 780 30 {
-lab=#net2}
+lab=#net1}
 N 750 -50 750 30 {
-lab=#net2}
+lab=#net1}
 N 750 -50 820 -50 {
-lab=#net2}
+lab=#net1}
 N 720 90 720 120 {
 lab=GND}
 N 700 90 720 90 {
@@ -367,10 +367,6 @@ spiceprefix=X
 C {devices/gnd.sym} 920 30 0 0 {name=l3 lab=GND}
 C {devices/iopin.sym} 1090 90 0 0 {name=p6 lab=x}
 C {devices/iopin.sym} 870 90 0 0 {name=p5 lab=y}
-C {devices/launcher.sym} -180 -130 0 0 {name=h15
-descr="Annotate OP" 
-tclcommand="set show_hidden_texts 1; xschem annotate_op"
-}
 C {devices/simulator_commands_shown.sym} -320 50 0 0 {name=COMMANDS
 simulator=ngspice
 only_toplevel=false 
@@ -385,7 +381,7 @@ value="
 .control
   save all
   op
-  *remzerovec 
+  remzerovec 
   write VCII.raw
 .endc
 "}
@@ -402,3 +398,7 @@ C {devices/lab_pin.sym} 570 -110 1 0 {name=p7 sig_type=std_logic lab=G1}
 C {devices/lab_pin.sym} 550 180 1 0 {name=p8 sig_type=std_logic lab=B1}
 C {devices/lab_pin.sym} 390 300 1 0 {name=p9 sig_type=std_logic lab=G2}
 C {devices/lab_pin.sym} 660 -10 2 0 {name=p10 sig_type=std_logic lab=D1}
+C {devices/launcher.sym} -180 -130 0 0 {name=h1
+descr="Annotate OP" 
+tclcommand="set show_hidden_texts 1; xschem annotate_op"
+}
