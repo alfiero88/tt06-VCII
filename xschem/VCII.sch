@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 710 -680 1510 -280 {flags=graph
-y1=0
-y2=2
+y1=-2e-06
+y2=2e-06
 ypos1=0
 ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=1.0587912e-22
-x2=1e-05
+x1=-35
+x2=-5
 divx=5
 subdivx=8
 xlabmag=1.0
@@ -28,14 +28,14 @@ logy=0
 color=4
 node=i(vmeas)}
 B 2 1780 -210 2580 190 {flags=graph
-y1=0.84
-y2=0.91
+y1=0.88
+y2=0.92
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.0587912e-22
+x1=0
 x2=1e-05
 
 subdivx=1
@@ -55,6 +55,35 @@ logy=0
 color="21 4"
 node="x
 z"}
+B 2 1780 260 2580 660 {flags=graph
+y1=-2e-06
+y2=2e-06
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=1e-05
+
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+
+
+
+
+
+color="4 7"
+node="i(@i1[current])
+i(vmeas)"}
 N 450 -200 450 -140 {
 lab=vdd}
 N 450 -200 660 -200 {
@@ -354,7 +383,7 @@ lab=x}
 C {sky130_fd_pr/nfet_01v8.sym} 430 90 0 0 {name=M1
 L=0.3
 W=10
-nf=1 
+nf=10 
 mult=5
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -368,7 +397,7 @@ spiceprefix=X
 C {sky130_fd_pr/nfet_01v8.sym} 680 90 0 1 {name=M2
 L=0.3
 W=10
-nf=1 
+nf=10 
 mult=5
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -382,7 +411,7 @@ spiceprefix=X
 C {sky130_fd_pr/pfet_01v8.sym} 640 -110 0 0 {name=M3
 L=1
 W=5
-nf=1
+nf=5
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -396,7 +425,7 @@ spiceprefix=X
 C {sky130_fd_pr/pfet_01v8.sym} 470 -110 0 1 {name=M4
 L=1
 W=5
-nf=1
+nf=5
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -478,7 +507,7 @@ spiceprefix=X
 C {sky130_fd_pr/pfet_01v8.sym} 840 -110 0 1 {name=M9
 L=1
 W=50
-nf=1
+nf=10
 mult=10
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -492,7 +521,7 @@ spiceprefix=X
 C {sky130_fd_pr/pfet_01v8.sym} 1000 -110 0 0 {name=M10
 L=1
 W=50
-nf=1
+nf=10
 mult=10
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -590,9 +619,9 @@ C {devices/ammeter.sym} 1070 220 0 0 {name=Vmeas savecurrent=true}
 C {devices/lab_pin.sym} 1490 -40 1 0 {name=p15 sig_type=std_logic lab=G4
 }
 C {sky130_fd_pr/nfet_01v8.sym} 1570 300 0 0 {name=M12
-L=2
-W=10
-nf=10 
+L=2.1
+W=5
+nf=5 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -604,9 +633,9 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 1570 30 0 0 {name=M15
-L=0.3
+L=0.15
 W=50
-nf=1 
+nf=10 
 mult=2
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -648,7 +677,7 @@ spiceprefix=X
 C {sky130_fd_pr/pfet_01v8.sym} 1390 30 0 0 {name=M17
 L=0.15
 W=50
-nf=1
+nf=10
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
