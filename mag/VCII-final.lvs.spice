@@ -639,13 +639,13 @@ X139 a_2551_n986# a_2351_n1083# a_2293_n986# w_n2747_n2677# sky130_fd_pr__pfet_0
 **devattr s=14500,558 d=29000,1116
 .ends
 
-.subckt VCII-final vdd vss ref x
-XXM12 G2 vss G2 vss G2 G2 vss vss vss vss G2 vss sky130_fd_pr__nfet_01v8_V5FT3Q
+.subckt VCII-final vdd vss z y ref x
+XXM12 G2 vss G2 vss G2 G2 z z vss z G2 vss sky130_fd_pr__nfet_01v8_V5FT3Q
 XXM13 vdd m1_17538_2386# vdd m1_17538_2386# sky130_fd_pr__pfet_01v8_3HZ9VM
 XXM14 m1_17538_2386# vss vss m1_17538_2386# m1_17538_2386# G2 vss G2 G2 m1_17538_2386#
 + G2 G2 vss vss G2 G2 vss G2 G2 m1_17538_2386# G2 vss sky130_fd_pr__nfet_01v8_EPHDNF
-XXM15 vdd vss G4 G4 vss G4 vss G4 G4 vss vss vdd vss vdd G4 G4 vss vdd vdd vss vdd
-+ G4 vdd G4 G4 vss G4 G4 G4 vdd vdd vss G4 G4 G4 G4 vdd G4 vss G4 vss G4 vss sky130_fd_pr__nfet_01v8_GSBCLJ
+XXM15 vdd z G4 G4 z G4 z G4 G4 z z vdd z vdd G4 G4 z vdd vdd vss vdd G4 vdd G4 G4
++ z G4 G4 G4 vdd vdd z G4 G4 G4 G4 vdd G4 z G4 z G4 z sky130_fd_pr__nfet_01v8_GSBCLJ
 XXM16 vdd m1_17538_2386# G4 vdd sky130_fd_pr__pfet_01v8_3HZ9VM
 XXM17 vss x vss G4 x x vss x x G4 vss x vss x x G4 vss x G4 G4 x G4 sky130_fd_pr__pfet_01v8_BDVWJN
 XXR1 m1_1128_7074# vss m1_1502_5068# sky130_fd_pr__res_xhigh_po_0p35_RF5GSL
@@ -653,28 +653,24 @@ XXR2 m1_1128_7074# vss vdd sky130_fd_pr__res_xhigh_po_0p35_RF5GSL
 XXR3 m1_1872_7070# vss m1_1502_5068# sky130_fd_pr__res_xhigh_po_0p35_RF5GSL
 XXR4 m1_2290_5064# m1_1872_7070# vss sky130_fd_pr__res_high_po_0p35_FFK5MY
 XXR5 G2 m1_2684_7472# vss sky130_fd_pr__res_high_po_0p35_FFK5MY
-XXM1 ref G1 G1 ref ref ref ref ref ref vss G1 ref ref ref vss vss vss vss vss ref
-+ vss G1 ref ref ref G1 vss vss ref ref vss G1 G1 ref ref ref G1 ref ref ref G1 G1
-+ ref vss ref ref G1 ref ref vss ref ref ref vss ref ref G1 G1 vss vss vss G1 G1 vss
-+ ref ref G1 ref ref G1 ref G1 ref G1 ref G1 ref vss ref vss ref vss ref vss ref ref
-+ vss vss G1 vss G1 vss ref vss ref G1 G1 G1 ref G1 ref G1 ref G1 G1 G1 sky130_fd_pr__nfet_01v8_FMJ72H
+XXM1 ref G1 G1 ref ref ref ref ref ref B1 G1 ref ref ref B1 B1 B1 B1 B1 ref B1 G1
++ ref ref ref G1 B1 B1 ref ref B1 G1 G1 ref ref ref G1 ref ref ref G1 G1 ref B1 ref
++ ref G1 ref ref B1 ref ref ref B1 ref ref G1 G1 B1 B1 B1 G1 G1 B1 ref ref G1 ref
++ ref G1 ref G1 ref G1 ref G1 ref B1 ref B1 ref B1 ref vss ref ref B1 B1 G1 B1 G1
++ B1 ref B1 ref G1 G1 G1 ref G1 ref G1 ref G1 G1 G1 sky130_fd_pr__nfet_01v8_FMJ72H
 XXR6 m1_2290_5064# m1_2684_7472# vss sky130_fd_pr__res_high_po_0p35_FFK5MY
-XXM2 vss D1 D1 vss vss vss vss vss vss vss D1 vss vss vss vss vss vss vss vss vss
-+ vss D1 vss vss vss D1 vss vss vss vss vss D1 D1 vss vss vss D1 vss vss vss D1 D1
-+ vss vss vss vss D1 vss vss vss vss vss vss vss vss vss D1 D1 vss vss vss D1 D1 vss
-+ vss vss D1 vss vss D1 vss D1 vss D1 vss D1 vss vss vss vss vss vss vss vss vss vss
-+ vss vss D1 vss D1 vss vss vss vss D1 D1 D1 vss D1 vss D1 vss D1 D1 D1 sky130_fd_pr__nfet_01v8_FMJ72H
+XXM2 y D1 D1 y y y y y y B1 D1 y y y B1 B1 B1 B1 B1 y B1 D1 y y y D1 B1 B1 y y B1
++ D1 D1 y y y D1 y y y D1 D1 y B1 y y D1 y y B1 y y y B1 y y D1 D1 B1 B1 B1 D1 D1
++ B1 y y D1 y y D1 y D1 y D1 y D1 y B1 y B1 y B1 y vss y y B1 B1 D1 B1 D1 B1 y B1
++ y D1 D1 D1 y D1 y D1 y D1 D1 D1 sky130_fd_pr__nfet_01v8_FMJ72H
 XXM3 G1 vdd vdd G1 D1 G1 G1 vdd D1 D1 G1 vdd sky130_fd_pr__pfet_01v8_3H5TVM
 XXM4 G1 G1 vdd G1 vdd G1 G1 G1 vdd vdd G1 G1 sky130_fd_pr__pfet_01v8_3H5TVM
-XXM5 vss vss vss vss vss G2 vss G2 G2 vss G2 G2 vss vss G2 G2 vss G2 G2 vss G2 vss
-+ sky130_fd_pr__nfet_01v8_EPHDNF
+XXM5 vss vss B1 vss vss G2 B1 G2 G2 vss G2 G2 B1 B1 G2 G2 B1 G2 G2 vss G2 B1 sky130_fd_pr__nfet_01v8_EPHDNF
 XXM6 G2 vss vss G2 G2 G2 vss G2 G2 G2 G2 G2 vss vss G2 G2 vss G2 G2 G2 G2 vss sky130_fd_pr__nfet_01v8_EPHDNF
-XXM7 vss D1 D1 m1_7898_5534# vss m1_7898_5534# D1 m1_7898_5534# D1 m1_7898_5534# D1
-+ vss D1 vss vss vss m1_7898_5534# vss D1 D1 m1_7898_5534# D1 m1_7898_5534# D1 vss
-+ m1_7898_5534# D1 m1_7898_5534# vss D1 D1 D1 D1 vss D1 D1 m1_7898_5534# D1 vss D1
-+ vss D1 sky130_fd_pr__nfet_01v8_SMX62R
-XXM8 vss vss vss vss vss G2 vss G2 G2 vss G2 G2 vss vss G2 G2 vss G2 G2 vss G2 vss
-+ sky130_fd_pr__nfet_01v8_EPHDNF
+XXM7 y D1 D1 m1_7898_5534# y m1_7898_5534# D1 m1_7898_5534# D1 m1_7898_5534# D1 y
++ D1 y y vss m1_7898_5534# y D1 D1 m1_7898_5534# D1 m1_7898_5534# D1 y m1_7898_5534#
++ D1 m1_7898_5534# y D1 D1 D1 D1 y D1 D1 m1_7898_5534# D1 y D1 y D1 sky130_fd_pr__nfet_01v8_SMX62R
+XXM8 y vss vss y y G2 vss G2 G2 y G2 G2 vss vss G2 G2 vss G2 G2 y G2 vss sky130_fd_pr__nfet_01v8_EPHDNF
 XXM9 vdd m1_7898_5534# vdd m1_7898_5534# m1_7898_5534# m1_7898_5534# m1_7898_5534#
 + m1_7898_5534# m1_7898_5534# m1_7898_5534# m1_7898_5534# vdd m1_7898_5534# m1_7898_5534#
 + m1_7898_5534# m1_7898_5534# m1_7898_5534# m1_7898_5534# vdd m1_7898_5534# vdd m1_7898_5534#
