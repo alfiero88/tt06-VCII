@@ -9,10 +9,10 @@ L 4 110 -260 1150 -260 {}
 L 4 1150 -260 1150 430 {}
 L 4 110 430 1150 430 {}
 L 4 110 -260 110 430 {}
-L 4 1180 -260 1710 -260 {}
-L 4 1710 -260 1710 430 {}
+L 4 1180 -260 1730 -260 {}
+L 4 1730 -260 1730 430 {}
 L 4 1180 -260 1180 430 {}
-L 4 1180 430 1710 430 {}
+L 4 1180 430 1730 430 {}
 T {REF Resistances} 280 -890 0 0 0.4 0.4 {}
 T {Current buffer} 530 -300 0 0 0.4 0.4 {}
 T {Voltage buffer} 1350 -300 0 0 0.4 0.4 {}
@@ -33,13 +33,9 @@ lab=B1}
 N 660 120 660 180 {
 lab=B1}
 N 450 90 520 90 {
-lab=B1}
-N 520 90 520 180 {
-lab=B1}
+lab=vss}
 N 590 90 660 90 {
-lab=B1}
-N 590 90 590 180 {
-lab=B1}
+lab=vss}
 N 550 180 550 270 {
 lab=B1}
 N 270 300 510 300 {
@@ -187,9 +183,7 @@ lab=G2}
 N 1590 90 1670 90 {
 lab=z}
 N 820 30 860 30 {
-lab=y}
-N 860 30 860 90 {
-lab=y}
+lab=vss}
 N 1020 -80 1020 -60 {
 lab=x}
 N 1020 -60 1020 270 {
@@ -218,12 +212,6 @@ N 1590 90 1590 270 {
 lab=z}
 N 1590 -20 1590 0 {
 lab=vdd}
-N 1590 30 1620 30 {
-lab=z}
-N 1620 30 1620 70 {
-lab=z}
-N 1590 70 1620 70 {
-lab=z}
 N 1590 -200 1590 -20 {
 lab=vdd}
 N 1410 -200 1590 -200 {
@@ -273,9 +261,7 @@ lab=vdd}
 N 1440 -200 1440 -130 {
 lab=vdd}
 N 1410 30 1450 30 {
-lab=G4}
-N 1450 -40 1450 30 {
-lab=G4}
+lab=vdd}
 N 1070 90 1090 90 {
 lab=x}
 N 230 -200 230 -170 {
@@ -322,6 +308,10 @@ N 370 90 410 90 {
 lab=ref}
 N 230 -170 230 -110 {
 lab=vdd}
+N 520 90 590 90 {
+lab=vss}
+N 1590 30 1680 30 {
+lab=vss}
 C {sky130_fd_pr/nfet_01v8.sym} 430 90 0 0 {name=M1
 L=0.3
 W=10
@@ -440,7 +430,7 @@ C {sky130_fd_pr/pfet_01v8.sym} 840 -110 0 1 {name=M9
 L=1
 W=50
 nf=20
-mult=10
+mult=7
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -454,7 +444,7 @@ C {sky130_fd_pr/pfet_01v8.sym} 1000 -110 0 0 {name=M10
 L=1
 W=50
 nf=20
-mult=10
+mult=7
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -503,9 +493,9 @@ C {devices/lab_pin.sym} 940 -110 1 0 {name=p12 sig_type=std_logic lab=G3}
 C {devices/lab_pin.sym} 1490 -40 1 0 {name=p15 sig_type=std_logic lab=G4
 }
 C {sky130_fd_pr/nfet_01v8.sym} 1570 300 0 0 {name=M12
-L=2.3
-W=5
-nf=5 
+L=2
+W=2
+nf=2 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -518,7 +508,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 1570 30 0 0 {name=M15
 L=0.15
-W=50
+W=40
 nf=10 
 mult=2
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -573,45 +563,43 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} 460 -810 2 0 {name=p19 sig_type=std_logic lab=G2}
-C {sky130_fd_pr/res_xhigh_po.sym} 260 -750 0 0 {name=R13
-W=0.35
-L=8
-model=res_xhigh_po
-spiceprefix=X
-mult=1}
-C {sky130_fd_pr/res_xhigh_po.sym} 260 -670 0 0 {name=R1
-W=0.35
-L=8
-model=res_xhigh_po
-spiceprefix=X
-mult=1}
-C {sky130_fd_pr/res_xhigh_po.sym} 260 -580 0 0 {name=R3
-W=0.35
-L=8
-model=res_xhigh_po
-spiceprefix=X
-mult=1}
 C {devices/lab_pin.sym} 200 -640 0 0 {name=p16 sig_type=std_logic lab=vss}
 C {devices/lab_pin.sym} 410 -700 0 0 {name=p17 sig_type=std_logic lab=vss}
-C {sky130_fd_pr/res_high_po.sym} 460 -750 0 0 {name=R6
-W=0.35
-L=10.5
-model=res_high_po
-spiceprefix=X
-mult=1}
-C {sky130_fd_pr/res_high_po.sym} 460 -660 0 0 {name=R7
-W=0.35
-L=10.5
-model=res_high_po
-spiceprefix=X
-mult=1}
-C {sky130_fd_pr/res_high_po.sym} 460 -580 0 0 {name=R4
-W=0.35
-L=10.5
-model=res_high_po
-spiceprefix=X
-mult=1}
 C {devices/iopin.sym} 750 -460 0 0 {name=p1 lab=vdd}
 C {devices/iopin.sym} 750 -430 0 0 {name=p2 lab=vss}
 C {devices/iopin.sym} 370 90 2 0 {name=p13 lab=ref}
 C {devices/lab_pin.sym} 260 -810 2 0 {name=p14 sig_type=std_logic lab=vdd}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 260 -750 0 0 {name=R2
+L=8
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 260 -670 0 0 {name=R1
+L=8
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 260 -580 0 0 {name=R3
+L=8
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_high_po_0p35.sym} 460 -660 0 0 {name=R5
+L=10
+model=res_high_po_0p35
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_high_po_0p35.sym} 460 -750 0 0 {name=R6
+L=10
+model=res_high_po_0p35
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_high_po_0p35.sym} 460 -580 0 0 {name=R4
+L=10
+model=res_high_po_0p35
+spiceprefix=X
+mult=1}
+C {devices/lab_pin.sym} 560 90 1 0 {name=p18 sig_type=std_logic lab=vss}
+C {devices/lab_pin.sym} 860 30 2 0 {name=p20 sig_type=std_logic lab=vss}
+C {devices/lab_pin.sym} 1680 30 2 0 {name=p21 sig_type=std_logic lab=vss}
+C {devices/lab_pin.sym} 1450 30 2 0 {name=p22 sig_type=std_logic lab=vdd}

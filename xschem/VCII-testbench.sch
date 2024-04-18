@@ -28,65 +28,7 @@ logy=0
 color=4
 node="\\"i(vmeas2) db20()\\""
 sim_type=ac
-rawfile=$netlist_dir/VCII.raw}
-B 2 1780 -210 2580 190 {flags=graph
-y1=0.88
-y2=0.92
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=0
-x2=1e-05
-
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-
-
-dataset=-1
-unitx=1
-logx=0
-logy=0
-
-
-
-
-
-color="21 4"
-node="x
-z"}
-B 2 1780 260 2580 660 {flags=graph
-y1=-2e-06
-y2=2e-06
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=0
-x2=1e-05
-
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-
-
-dataset=-1
-unitx=1
-logx=0
-logy=0
-
-
-
-
-
-
-
-color="4 7"
-node="i(vmeas2)
-i(@i2[current])"}
+rawfile=$netlist_dir/VCII-testbench.raw}
 B 2 1770 -900 2570 -500 {flags=graph,unlocked
 y1=4.8e-06
 y2=6.4e-06
@@ -137,9 +79,53 @@ logy=0
 
 
 sim_type=ac
-rawfile=$netlist_dir/VCII.raw
+rawfile=$netlist_dir/VCII-testbench.raw
 color=7
 node=ph(vmeas2)}
+B 2 1780 -190 2580 210 {flags=graph
+y1=0.88
+y2=0.97
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=1e-05
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="x
+z"
+color="4 7"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+sim_type=tran}
+B 2 1780 250 2580 650 {flags=graph
+y1=-2e-06
+y2=2e-06
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=1e-05
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="i(vmeas2)
+i(@i2[current])"
+color="4 7"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+}
 N 640 -730 640 -690 {
 lab=vdd}
 N 640 -550 640 -510 {
