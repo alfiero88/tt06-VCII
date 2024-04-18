@@ -1,0 +1,147 @@
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__res_xhigh_po_0p35 and Circuit 2 cell sky130_fd_pr__res_xhigh_po_0p35 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__res_xhigh_po_0p35 |Circuit 2: sky130_fd_pr__res_xhigh_po_0p35 
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__res_xhigh_po_0p35 and sky130_fd_pr__res_xhigh_po_0p35 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__res_high_po_0p35 and Circuit 2 cell sky130_fd_pr__res_high_po_0p35 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__res_high_po_0p35  |Circuit 2: sky130_fd_pr__res_high_po_0p35  
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__res_high_po_0p35 and sky130_fd_pr__res_high_po_0p35 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_V5FT3Q in circuit VCII-final (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_3HZ9VM in circuit VCII-final (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_EPHDNF in circuit VCII-final (0)(5 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_GSBCLJ in circuit VCII-final (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_BDVWJN in circuit VCII-final (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p35_RF5GSL in circuit VCII-final (0)(3 instances)
+Flattening unmatched subcell sky130_fd_pr__res_high_po_0p35_FFK5MY in circuit VCII-final (0)(3 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_FMJ72H in circuit VCII-final (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_3H5TVM in circuit VCII-final (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_SMX62R in circuit VCII-final (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_P7N2DR in circuit VCII-final (0)(2 instances)
+
+Class VCII-final (0):  Merged 482 parallel devices.
+Class VCII-final (0):  Merged 4 series devices.
+Class VCII-final (1):  Merged 4 series devices.
+Subcircuit summary:
+Circuit 1: VCII-final                      |Circuit 2: VCII-final                      
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (195->8)           |sky130_fd_pr__nfet_01v8 (19->10) **Mismatc 
+sky130_fd_pr__pfet_01v8 (302->7)           |sky130_fd_pr__pfet_01v8 (25->7)            
+sky130_fd_pr__res_xhigh_po_0p35 (3->1)     |sky130_fd_pr__res_xhigh_po_0p35 (3->1)     
+sky130_fd_pr__res_high_po_0p35 (3->1)      |sky130_fd_pr__res_high_po_0p35 (3->1)      
+Number of devices: 17 **Mismatch**         |Number of devices: 19 **Mismatch**         
+Number of nets: 11 **Mismatch**            |Number of nets: 14 **Mismatch**            
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: VCII-final                      |Circuit 2: VCII-final                      
+
+---------------------------------------------------------------------------------------
+Net: G2                                    |Net: G2                                    
+  sky130_fd_pr__nfet_01v8/2 = 4            |  sky130_fd_pr__nfet_01v8/2 = 6            
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
+  sky130_fd_pr__res_high_po_0p35/(1|2) = 1 |  sky130_fd_pr__res_high_po_0p35/(1|2) = 1 
+                                           |                                           
+Net: vss                                   |Net: vss                                   
+  sky130_fd_pr__nfet_01v8/(1|3) = 9        |  sky130_fd_pr__nfet_01v8/(1|3) = 6        
+  sky130_fd_pr__nfet_01v8/4 = 8            |  sky130_fd_pr__nfet_01v8/4 = 6            
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__res_xhigh_po_0p35/3 = 1    |  sky130_fd_pr__res_xhigh_po_0p35/3 = 1    
+  sky130_fd_pr__res_high_po_0p35/3 = 1     |  sky130_fd_pr__res_high_po_0p35/3 = 1     
+  sky130_fd_pr__nfet_01v8/2 = 1            |                                           
+                                           |                                           
+(no matching net)                          |Net: B1                                    
+                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 3        
+                                           |  sky130_fd_pr__nfet_01v8/4 = 2            
+                                           |                                           
+(no matching net)                          |Net: y                                     
+                                           |  sky130_fd_pr__nfet_01v8/2 = 1            
+                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 2        
+                                           |  sky130_fd_pr__nfet_01v8/4 = 1            
+                                           |                                           
+(no matching net)                          |Net: z                                     
+                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 2        
+                                           |  sky130_fd_pr__nfet_01v8/4 = 1            
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: VCII-final                      |Circuit 2: VCII-final                      
+
+---------------------------------------------------------------------------------------
+Instance: sky130_fd_pr__nfet_01v8_V5FT3Q:X |Instance: sky130_fd_pr__nfet_01v8:M5       
+  (1,3) = (21,21)                          |  (1,3) = (15,5)                           
+  2 = 6                                    |  2 = 8                                    
+  4 = 21                                   |  4 = 15                                   
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8_EPHDNF:X |Instance: sky130_fd_pr__nfet_01v8:M6       
+  (1,3) = (21,6)                           |  (1,3) = (15,8)                           
+  2 = 6                                    |  2 = 8                                    
+  4 = 21                                   |  4 = 15                                   
+                                           |                                           
+(no matching instance)                     |Instance: sky130_fd_pr__nfet_01v8:M8       
+                                           |  (1,3) = (15,4)                           
+                                           |  2 = 8                                    
+                                           |  4 = 15                                   
+                                           |                                           
+                                           |                                           
+(no matching instance)                     |Instance: sky130_fd_pr__nfet_01v8:M12      
+                                           |  (1,3) = (15,3)                           
+                                           |  2 = 8                                    
+                                           |  4 = 15                                   
+                                           |                                           
+---------------------------------------------------------------------------------------
+Netlists do not match.
+
+Subcircuit pins:
+Circuit 1: VCII-final                      |Circuit 2: VCII-final                      
+-------------------------------------------|-------------------------------------------
+vss                                        |z **Mismatch**                             
+x                                          |x                                          
+ref                                        |ref                                        
+vdd                                        |vdd                                        
+(no matching pin)                          |vss                                        
+(no matching pin)                          |y                                          
+---------------------------------------------------------------------------------------
+Cell pin lists for VCII-final and VCII-final altered to match.
+Device classes VCII-final and VCII-final are equivalent.
+
+Final result: Top level cell failed pin matching.
