@@ -54,8 +54,8 @@ pinout:
   # The first pins is always ua[0], and the pin numbers must be sequential.
   ua[0]: "output"
   ua[1]: "output"
+  ua[2]: "input"
   ua[3]: "input"
-  ua[4]: "input"
   
 
 # Do not change!
