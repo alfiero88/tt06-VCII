@@ -16,7 +16,7 @@ module tt_um_alfiero88_VCII (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-	VCII-final VCII-final (
+	VCII_final VCII_final (
 	  .vdd(VPWR),
 	  .vss(VGND),
 	  .z(ua[1]),
