@@ -20,8 +20,8 @@ module tt_um_alfiero88_VCII (
 	  .vdd(VPWR),
 	  .vss(VGND),
 	  .z(ua[1]),
-	  .y(ua[3]),
-	  .ref(ua[4]),
+	  .y(ua[2]),
+	  .ref(ua[3]),
 	  .x(ua[0])
 	  );
 	  
